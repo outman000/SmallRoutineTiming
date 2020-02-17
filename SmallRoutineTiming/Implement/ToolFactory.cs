@@ -9,6 +9,9 @@ using System.Text;
 
 namespace SmallRoutineTiming.Implement
 {
+    /// <summary>
+    /// 创建不同数据库的dbcontext工厂
+    /// </summary>
     public  class ToolFactory :IToolFactory
     {
         public TimeDbContext getDbContext() {

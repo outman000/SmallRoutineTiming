@@ -7,6 +7,6 @@ namespace SmallRoutineTiming.Interface
 {
     public interface IResporityWhiteList
     {
- void aaaa(List<whiteList> whiteLists);
+       void aaaa(List<whiteList> whiteLists);
     }
 }

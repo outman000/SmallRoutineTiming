@@ -8,6 +8,7 @@ namespace SmallRoutineTiming.Automapper
 {
     public  class SmallRoutineMapper : Profile
     {
+        //数据库转换毕竟字段不一样，所以用automapper的意义不大
         public SmallRoutineMapper()
         {
             CreateMap<List<whiteList>, List<Company> >();

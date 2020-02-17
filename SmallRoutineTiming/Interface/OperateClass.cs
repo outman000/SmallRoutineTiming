@@ -7,6 +7,9 @@ using System.Text;
 
 namespace SmallRoutineTiming.Interface
 {
+    /// <summary>
+    /// 这里最好通过接口来写，这里我写的太着急了就直接用类了
+    /// </summary>
     public class OperateClass
     {
        public   void MysqltoSqlServer(List<gwh_qyrkxx> gwh_s, List<whiteList> whiteLists, TimeDbContext timeDbContext)
@@ -63,6 +66,9 @@ namespace SmallRoutineTiming.Interface
 
         public void outputValide(List<whiteList> whiteLists, List<UserInfo> UserLists, TimeDbContext timecontext)
         {
+            //如果再同步的过程中如果存在被同步的表需要取数据到第三个表的时候一定要建一个临时表暂存一下
+            //因为savechange前是取不到数据库的
+            //而且尽量将数据整理完之后用一个savechange导入，要不太慢了
             List<UserInfo> userInfostemp = new List<UserInfo>();//临时验证
             for (int i = 0; i < whiteLists.Count; i++)
             {
