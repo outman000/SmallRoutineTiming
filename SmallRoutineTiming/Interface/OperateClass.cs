@@ -26,7 +26,8 @@ namespace SmallRoutineTiming.Interface
                 {
                     whiteList whiteList = new whiteList();
 
-            
+                    //在同步的过程中这里也没啥好办法，用automapper也得一个一个指定
+                    //如果两个表字段一样的话直接用automapper转就行了
 
                     whiteList.PeopleName = gwh_s[i].xingming;
                     whiteList.backJinInformation = gwh_s[i].fanjinjiaotongfangshi;
